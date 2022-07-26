@@ -14,8 +14,8 @@ spec:
   template:
     metadata:
       name: myapp-pod 
-    labels: 
-      app: myapp #the same label which we have define in pod defination will have it in tempalte also \
+      labels: 
+        app: myapp #the same label which we have define in pod defination will have it in tempalte also \
     spec:
       containers:
         - name: myapp3-container 
