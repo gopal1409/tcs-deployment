@@ -22,8 +22,8 @@ spec:
           image: stacksimplify/kubenginx:3.0.0
           ports:
             - containerPort: 80 
-      resources:
-        limits: 
-          memory: "1024Mi"
-        requests:
-          memory: "100"
+          resources:
+            limits: 
+            memory: "1024Mi"
+            requests:
+              memory: "100"
