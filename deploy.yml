@@ -1,0 +1,24 @@
+###all the interaction will happen using api
+apiVersion: apps/v1
+###what type of api you want to use it.
+kind: Deployment 
+metadata:
+  name: my-first-deployment
+#specification 
+spec:
+  replicas: 3 #three pod it is going to create 
+  selector:
+    matchLabels:
+      app: myapp
+  #inside my pod i need to deploy my container image so all the three pod will have similar image. 
+  template:
+    metadata:
+      name: myapp-pod 
+    labels: 
+      app: myapp #the same label which we have define in pod defination will have it in tempalte also \
+    spec:
+      containers:
+        - name: myapp3-container 
+          image: stacksimplify/kubenginx:3.0.0
+          ports:
+            - containerPort: 80 
